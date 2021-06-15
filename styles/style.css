@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    
+    font-family: 'Roboto Mono', monospace;
+}
+
+:root {
+    --salmon-dark: #ec2b35;
+    
+    --salmon-scroll: #f0525a;
+    --salmon-scroll2: #ee7379;
+    
+    --gradient-salmon: #FA8072;
+    --gradient-white: #FFE2E2;
+
+    --white: #FFF;
+    --black: black;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+
+    background: linear-gradient(to bottom, var(--gradient-white), var(--gradient-salmon));
+}
+
+h1 {
+    font-size: 3.125rem;
+    background: -webkit-linear-gradient(60deg, var(--salmon-dark), var(--gradient-salmon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+}
+
+#goals {
+    padding: .5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--salmon-dark);
+    background: var(--gradient-white);
+    color: var(--salmon-dark);
+}
+
+#addToList {
+    background: var(--gradient-white);
+    color: var(--salmon-dark);
+    
+    border: 1px solid var(--salmon-dark);
+    border-radius: 1rem;
+    
+    padding: .5rem;
+
+    transition: .5s;
+}
+
+#addToList:hover {
+    background: var(--salmon-scroll);
+    color: var(--gradient-white);
+}
+
+#removeToList {
+    background: var(--salmon-dark);
+    color: var(--gradient-white);
+    
+    border: 1px solid var(--gradient-white);
+    border-radius: 1rem;
+    
+    padding: .5rem;
+
+    transition: .5s;
+}
+
+#removeToList:hover {
+    background: transparent;
+    color: var(--salmon-dark);
+    border: 1px solid var(--salmon-dark);
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#list p {
+    font-size: .8rem;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1rem;
+    color: var(--salmon-dark);
+}
+
+#list h3 {
+    font-size: 1.25rem;
+    color: var(--salmon-dark);
+}
+
+#toDoList {
+    background: linear-gradient(-60deg, var(--gradient-salmon), var(--gradient-white));
+    border: 1rem groove var(--salmon-dark);
+
+    padding: 1rem;
+    width: 24.375rem;
+
+    overflow: auto;
+}
+
+#toDoList::-webkit-scrollbar {
+    width: 0.75rem;
+    border-radius: 0.4375rem;
+    background: var(--salmon-scroll2);
+}
+
+#toDoList::-webkit-scrollbar-thumb {
+    border-radius: 0.4375rem;
+    background: var(--salmon-scroll);
+}
+
+#toDoList option {
+    font-size: 1rem;
+
+    color: var(--salmon-dark);
+}
+
+
+
+
+
+
+
+
+@media(max-width: 950px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media(max-width: 650px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+@media(max-width: 500px) {
+    body {
+        max-width: 100vw;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #goals {
+        padding: .3rem;
+        margin-bottom: .7rem;
+        height: 2rem;
+        border-radius: .8rem;
+    }
+
+    #addToList {
+        padding: .3rem .5rem;
+        height: 2rem;
+        border-radius: .8rem;
+    }
+
+    #toDoList {
+        width: 18rem;
+    }
+}
+
+@media(max-width: 400px) {
+    html {
+        font-size: 81%;
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List | Exercícios</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <h1>To-Do List</h1>
+    
+    <main>
+        <div>
+            <input type="text" name="goals" id="goals" placeholder="Digite uma tarefa...">
+            <button id="addToList">Adicionar à lista</button> <!--  onclick="addToDoList()" -->
+        </div>
+
+        <div id="list">
+            <h3>Lista de Afazeres</h3>
+            <select name="toDoList" id="toDoList" size="10">
+                
+            </select>
+            <p>OBS: Quando concluir uma tarefa e for excluí-la, <br> selecione-a e clique em remover da lista.</p>
+        </div>
+        <button id="removeToList">Remover da lista</button>
+    </main>
+
+    <script type="module" src="./scripts/script.js"></script>
+</body>
+</html>
