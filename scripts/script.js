@@ -41,3 +41,6 @@ removeToList.onclick = () => {
         localStorage.setItem('goals', JSON.stringify(goalsOnStorage))
         location.reload();
 }
+
+goals.value = '';
+goals.focus();
