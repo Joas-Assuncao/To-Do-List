@@ -1,10 +1,11 @@
 const goals = document.querySelector('#goals');
-let addToList = document.querySelector('button#addToList');
-let removeToList = document.querySelector('button#removeToList');
+const addToList = document.querySelector('button#addToList');
+const removeToList = document.querySelector('button#removeToList');
 let toDoList = document.querySelector('select#toDoList');
 
-let goalsOnStorage = JSON.parse(localStorage.getItem('goals')) || [];
+// Trazer tarefas do storage
 
+const goalsOnStorage = JSON.parse(localStorage.getItem('goals')) || [];
 
 function loadPage() {
     for(let i = 0; i < goalsOnStorage.length; i++) {
@@ -15,6 +16,8 @@ function loadPage() {
 }
 
 loadPage();
+
+// Adicionar à lista
 
 addToList.onclick = () => {
     if(goals.value === '') {
@@ -35,12 +38,16 @@ addToList.onclick = () => {
     goals.focus();
 }
 
+// Remover da lista
+
 removeToList.onclick = () => {
         const index = toDoList.selectedIndex;
         goalsOnStorage.splice(index, 1);
         localStorage.setItem('goals', JSON.stringify(goalsOnStorage))
         location.reload();
 }
+
+// Limpar input e manter focado no mesmo
 
 goals.value = '';
 goals.focus();
